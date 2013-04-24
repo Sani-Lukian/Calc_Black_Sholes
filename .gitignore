@@ -1,4 +1,124 @@
-kjhkhgbvkjh
+  
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251"/>
+<meta http-equiv="Content-Language" content="ru"/>
 
-k;
-k
+<meta name="Keywords" content="Опционный калькулятор Блэка Шоулза"/>
+<meta name="Description" content="Опционный калькулятор - модель ценообразования опционов Блэка–Шоулза (англ. Black–Scholes Option Pricing Model)"/>
+<title>Опционный калькулятор по модели ценообразования опционов Блэка–Шоулза</title>
+</head>
+<body>
+<table cellspacing="0">
+     <tr>
+         <td valign="top" colspan="2">
+
+             <h1>Опционный калькулятор - модель Блэка — Шоулза</h1>
+                     <table cellspacing="0">
+                             <tr>
+                             <td valign="top" width="49%">
+  <script type="text/javascript" src="optionCalc.js"></script>
+<h2>Первоначальные данные</h2>
+<form >
+<script type="text/javascript">
+document.write('');
+</script>
+
+<noscript>
+<p class="error"><b>ОШИБКА!</b> Вам необходимо включить JavaSript!
+</noscript>
+<table width="100%">
+     <tbody>
+         <tr>
+              <td width="50%">Текущая цена базисной акции(<i>spot price</i>)</td>
+              <td width="50%" valign="top"><input class="vis input W120" id="S" type="text" value="25.00" onkeyup="optionCalc()" /></td>
+         </tr>
+         <tr>
+
+              <td>Цена исполнения опциона (<i>strike price</i>)</td>
+              <td valign="top"><input class="vis input W120" id="X" type="text" value="30.00" onkeyup="optionCalc()" /></td>
+         </tr>
+         <tr>
+              <td>Время до истечения срока опциона (период опциона)</td>
+              <td valign="top"><input class="vis input W120" id="T" type="text" value="60.00" onkeyup="optionCalc()" /></td>
+         </tr>
+
+         <tr>
+             <td>Годовая процентная ставка (непрерывное накопление)</td>
+              <td valign="top"><input class="vis input W120" id="Rf" type="text" value="5.00" onkeyup="optionCalc()" /> %</td>
+         </tr>
+         <tr>
+             <td>Волатильность базисной акции</td>
+             <td valign="top"><input class="vis input W120" id="sigma" type="text" value="15.00" onkeyup="optionCalc()" /> %</td>
+
+         </tr>
+			 </tbody>
+   </table>
+</form>
+</td>
+  <td valign="top" width="10px"></td>
+  <td valign="top" width="49%">
+  <form  action="" method="post">
+<h2>Результат</h2>
+
+         <table cellspacing="1" width="100%" >
+             <tr>
+                 <td width="34%"> </td>
+                 <td align="center" width="33%"><b>Call</b></td>
+                 <td align="center" width="33%"><b>Put</b></td>
+             </tr>
+             <tr>
+
+                 <td>Цена</td>
+                 <td align="right"><input class="hidden input W75" id="C" type="text" readonly="readonly" value="0.001021" /></td>
+                 <td align="right"><input class="hidden input W75" id="P" type="text" readonly="readonly" value="4.755456" /></td>
+             </tr>
+             <tr>
+                 <td>&Delta; (дельта)</td>
+                 <td align="right"><input class="hidden input W75" id="delta_C" type="text" readonly="readonly" value="0.00231" /></td>
+
+                 <td align="right"><input class="hidden input W75" id="delta_P" type="text" readonly="readonly" value="-0.99769" /></td>
+             </tr>
+             <tr>
+                 <td>&Gamma; (гамма)</td>
+                 <td align="right" colspan="2"><input class="hidden input W75" id="gamma" type="text" readonly="readonly" value="0.004753" /></td>
+             </tr>
+             <tr>
+                 <td>&nu; (вега)</td>
+
+                 <td align="right" colspan="2"><input class="hidden input W75" id="vega" type="text" readonly="readonly" value="0.000732" /></td>
+             </tr>
+             <tr>
+                 <td>&rho; (ро)</td>
+                 <td align="right"><input class="hidden input W75" id="rho_C" type="text" readonly="readonly" value="0.000093" /></td>
+                 <td align="right"><input class="hidden input W75" id="rho_P" type="text" readonly="readonly" value="-0.048818" /></td>
+             </tr>
+             <tr>
+
+                 <td>&Theta; (тета)</td>
+                 <td align="right"><input class="hidden input W75" id="theta_C" type="text" readonly="readonly" value="-0.000099" /></td>
+                 <td align="right"><input class="hidden input W75" id="theta_P" type="text" readonly="readonly" value="0.003977" /></td>
+             </tr>
+             <tr>
+                 <td>d1 =</td>
+                 <td align="right" colspan="2"><input class="hidden input W75" id="d1" readonly="readonly" value="-2.832347" /></td>
+
+             </tr>
+             <tr>
+                 <td>d2 =</td>
+                 <td align="right" colspan="2"><input class="hidden input W75" id="d2" readonly="readonly" value="-2.893163" /></td>
+             </tr>
+          </table>
+ </form>
+ </td>
+
+ </tr>
+</table>
+&nbsp;
+</td>
+<td valign="top" width="280">
+</td>
+</tr>
+</table>
+</body>
+</html>
